@@ -1,0 +1,20 @@
+[package]
+name = "slickscreen"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+default = ["cli"]
+cli = ["dep:anyhow", "dep:clap"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = { version = "1.0", optional = true }
+clap = { version = "3.1.9", features = ["derive"], optional = true }
+cpal = "0.13.5"
+crossbeam = "0.8.1"
+ctrlc = { version = "3.2.1", features = ["termination"] }
+ffmpeg-next = "5.0.3"
+scrap = "0.5.0"
+thiserror = "1.0.30"
